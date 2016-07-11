@@ -1,2 +1,0 @@
-defmodule Mashiro do
-end
