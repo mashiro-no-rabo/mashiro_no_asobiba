@@ -11,10 +11,10 @@ defmodule Mashiro.Mixfile do
   end
 
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :redix]]
   end
 
   defp deps do
-    []
+    [{:redix, "~> 0.4.0"}]
   end
 end
