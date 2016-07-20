@@ -11,10 +11,13 @@ defmodule Mashiro.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :redix]]
+    [applications: [:logger, :redix, :cowboy, :plug, :porcelain]]
   end
 
   defp deps do
-    [{:redix, "~> 0.4.0"}]
+    [{:redix, "~> 0.4.0"},
+     {:porcelain, github: "alco/porcelain"},
+     {:plug, "~> 1.0"},
+     {:cowboy, "~> 1.0"}]
   end
 end
