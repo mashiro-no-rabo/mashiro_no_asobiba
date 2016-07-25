@@ -1,5 +1,8 @@
 defmodule Mashiro.GpgAuth do
   @moduledoc """
+  To run this example, start the server with `Mashiro.GpgAuth.run` from `iex -S mix`,
+  Then send result of `gpg2 --clearsign` to `localhost:8080/auth`
+
   Example output of `gpg2 --verify --no-comment --status-fd 1 2> /dev/null`
 
   ```
