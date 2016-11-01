@@ -5,8 +5,7 @@ defmodule ShiroiTesuto do
     Application.put_env(:mashiro, Mashiro.Modattr, [key: "set in test!"])
   end
 
-  test "truth" do
-    Mashiro.Modattr.query()
+  test "233" do
     assert 1 + 1 == 2
   end
 end

@@ -11,13 +11,16 @@ defmodule Mashiro.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :redix, :cowboy, :plug, :porcelain]]
+    [applications: [:logger, :redix, :cowboy, :plug, :porcelain, :slack]]
   end
 
   defp deps do
     [{:redix, "~> 0.4.0"},
      {:porcelain, github: "alco/porcelain"},
      {:plug, "~> 1.0"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:slack, path: "../Elixir-Slack"},
+     {:yaml_elixir, "~> 1.2"},
+   ]
   end
 end

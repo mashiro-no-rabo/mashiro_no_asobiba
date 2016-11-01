@@ -17,3 +17,5 @@ erl_crash.dump
 *.ez
 
 /data
+/config/secret.exs
+/typeIDs.yaml
