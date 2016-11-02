@@ -11,7 +11,7 @@ defmodule Mashiro.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :redix, :cowboy, :plug, :porcelain, :slack]]
+    [applications: [:logger, :redix, :cowboy, :plug, :porcelain, :slack, :yaml_elixir]]
   end
 
   defp deps do
