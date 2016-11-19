@@ -21,6 +21,7 @@ defmodule Mashiro.Mixfile do
      {:cowboy, "~> 1.0"},
      {:slack, path: "../Elixir-Slack"},
      {:yaml_elixir, "~> 1.2"},
+     {:benchee, "~> 0.5"},
    ]
   end
 end

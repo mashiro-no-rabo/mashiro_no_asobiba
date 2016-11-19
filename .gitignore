@@ -19,3 +19,4 @@ erl_crash.dump
 /data
 /config/secret.exs
 /typeIDs.yaml
+/elm/elm-stuff
