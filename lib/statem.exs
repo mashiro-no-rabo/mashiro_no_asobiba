@@ -30,12 +30,21 @@ defmodule Statem do
   def preparing(:info, :prepared, state) do
     Logger.debug("prepared")
 
-    schedule_next_track(2000)
+
     {:next_state, :resting, state}
   end
 
+  def resting(:enter, :preparing, state) do
+    Logger.debug("resting from preparing")
+    schedule_next_track(2)
+    {:keep_state, state}
+  end
+  def resting(:enter, :updating, state) do
+    Logger.debug("resting from updating")
+    schedule_next_track()
+    {:keep_state, state}
+  end
   def resting(:info, :track, state), do: {:next_state, :tracking, state}
-  def resting(_, _, state), do: {:next_state, :resting, state}
 
   def tracking(:enter, _, state) do
     Logger.debug("tracking")
@@ -55,7 +64,6 @@ defmodule Statem do
   end
   def updating(_, _, state) do
     Logger.debug("updated")
-    schedule_next_track()
     {:next_state, :resting, state}
   end
 
